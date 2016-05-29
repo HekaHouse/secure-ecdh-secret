@@ -1,7 +1,7 @@
 {
   "name": "secure-ecdh-secret",
   "version": "1.0.1",
-  "description": "A Polymer element to create a service worker subscription.",
+  "description": "A polymer element providing ECDH secret derivation in Chrome and Firefox.",
   "main": "index.js",
   "dependencies": {
     "crypto": "^0.0.3",
