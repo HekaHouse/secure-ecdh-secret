@@ -1,0 +1,29 @@
+{
+  "name": "secure-ecdh-secret",
+  "version": "1.0.1",
+  "authors": [
+    "Aron Price <aron@heka.house>"
+  ],
+  "description": "A polymer element providing ECDH secret derivation in Chrome and Firefox.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "cryptography",
+    "ECDH"
+  ],
+  "main": "secure-ecdh-secret.html",
+  "license": "https://heka-house-polymer-demos.firebaseio.com/LICENSE",
+  "homepage": "https://github.com/HekaHouse/secure-ecdh-secret/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0",
+    "secure-ecdh-secret": "HekaHouse/secure-ecdh-secret#^1.0.1"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0"
+  }
+}
