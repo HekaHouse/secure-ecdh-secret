@@ -20,8 +20,10 @@
     </secure-ecdh-secret>
 
 The following properties must be populated with base64 strings prior to trigger secret creation:
-    clientAuthSecret (provided with service worker subscription to FCM/GCM)
-    receiverKey (provided with service worker subscription to FCM/GCM)
+
+clientAuthSecret (provided with service worker subscription to FCM/GCM)
+
+receiverKey (provided with service worker subscription to FCM/GCM)
 
 ## Dependencies
 
