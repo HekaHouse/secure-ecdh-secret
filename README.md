@@ -1,6 +1,6 @@
 # secure-ecdh-secret
 
-`<secure-ecdh-secret>` A Polymer element to create a service worker subscription.
+`<secure-ecdh-secret>` A polymer element providing ECDH secret derivation in Chrome and Firefox.
 
 [API Docs and Demo](https://heka-house-polymer-demos.firebaseapp.com/secure-ecdh-secret)
 
@@ -14,13 +14,14 @@
 ## Example
 
     <secure-ecdh-secret
-      subscription-key-path="https://YOUR-FIREBASE.firebaseio.com/subscriptions/SUBSCRIPTION-ID"
-      subscription="{{subscriptionKey}}">
+      client-auth-secret="{{FCM AUTH SECRET}}"
+      receiver-key="{{FCM P256 KEY}}"
+      shared-secret="{{sharedSecret}}">
     </secure-ecdh-secret>
 
-## Note
-
-Upon successful subscription the subscription key is saved to Firebase under subscription key path
+The following properties must be populated with base64 strings prior to trigger secret creation:
+    clientAuthSecret (provided with service worker subscription to FCM/GCM)
+    receiverKey (provided with service worker subscription to FCM/GCM)
 
 ## Dependencies
 
@@ -35,6 +36,16 @@ Then, go ahead and download the element's dependencies:
 
 secure-ecdh-secret depends on
 
-[firebase-input](https://heka-house-polymer-demos.firebaseapp.com/firebase-input)
+[secure-utils](http://github.com/hekahouse/secure-utils/)
+
+includes embedded browser version of [Elliptic](https://github.com/indutny/elliptic)
+
+Elliptic is used because Chrome doesn't support importing public ECDH keys using Web Crypto API
+
+If this support is provided in the future Elliptic should be replaced with Web Crypto key import
 
 ## Related
+
+[secure-fcm-crypto](http://github.com/hekahouse/secure-fcm-crypto/)
+
+[service-worker-subscription](http://github.com/hekahouse/service-worker-subscription/)
